@@ -5,7 +5,7 @@ export default function NavBarThree() {
 const [mobileToggle, setMobileToggle] = useState("hidden")
   const navToggle = () => {
     if( mobileToggle === "hidden"){
-      setMobileToggle("mobile-menu")
+      setMobileToggle("mobile-menu ")
     } else {
       setMobileToggle("hidden")
     }
@@ -13,10 +13,10 @@ const [mobileToggle, setMobileToggle] = useState("hidden")
   return (
     <div className=''>
     
-		<nav className="bg-blue-500 shadow-lg">
+		<nav className=" bg-blue-500 shadow-lg md: ">
 			<div className=" ">
 				<div className="flex">
-					<div className="flex ">
+					<div className="flex w-full justify-around">
 						<div>
 						
 							<a href="#" class="flex py-4 px-2">
@@ -24,7 +24,7 @@ const [mobileToggle, setMobileToggle] = useState("hidden")
 							</a>
 						</div>
 					
-						<div class="hidden md:flex items-end w-50 space-x-5">
+						<div class="hidden md:flex items-end space-x-5">
 							<a href="" className="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
 							<a href="" className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300">Services</a>
 							<a href="" className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300">About</a>
@@ -36,8 +36,8 @@ const [mobileToggle, setMobileToggle] = useState("hidden")
 			
 					
 					<div className="md:hidden flex items-center">
-              <button onClick={navToggle} class="outline-none mobile-menu-button">
-						<svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+              <button onClick={navToggle} class="outline-none mobile-menu-button text-white pr-5">
+						<svg class=" w-6 h-6 text-white-100 hover:text-green-500 "
 							x-show="showMenu"
 							fill="none"
 							stroke-linecap="round"
