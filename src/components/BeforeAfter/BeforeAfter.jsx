@@ -22,13 +22,13 @@ export default function BeforeAfter() {
             <div
               className='flex justify-center items-center h-100 w-1/2 border-r-2'
             >
-              <img className='h-auto w-11/12' src={MiltonBefore} />
+              <img className='h-auto w-11/12' src={MiltonBefore} alt={MiltonBefore} />
             </div>
 
             <div
               className='flex justify-center items-center h-100 w-1/2 '
             >
-            <img className='h-auto w-11/12' src={MiltonAfter} />
+            <img className='h-auto w-11/12' src={MiltonAfter} alt={MiltonAfter} />
             </div>
 
             </div>

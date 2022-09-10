@@ -29,6 +29,8 @@ export default function NavBarThree() {
       setNavStatusAboutMobile(isNotOnPageMobile)
       setNavStatusServicesMobile(isNotOnPageMobile)
 
+      setMobileToggle("hidden")
+
     } else if (location.pathname === "/services") {
       setNavStatusServices(isOnPage)
       setNavStatusAbout(isNotOnPage)
@@ -38,6 +40,8 @@ export default function NavBarThree() {
       setNavStatusAboutMobile(isNotOnPageMobile)
       setNavStatusHomeMobile(isNotOnPageMobile)
 
+      setMobileToggle("hidden")
+
     } else if(location.pathname === "/about") {
       setNavStatusAbout(isOnPage)
       setNavStatusHome(isNotOnPage)
@@ -46,6 +50,8 @@ export default function NavBarThree() {
       setNavStatusAboutMobile(isOnPageMobile)
       setNavStatusHomeMobile(isNotOnPageMobile)
       setNavStatusServicesMobile(isNotOnPageMobile)
+
+      setMobileToggle("hidden")
 
     }
   }, [location.pathname])
@@ -67,13 +73,13 @@ export default function NavBarThree() {
 					<div className="flex w-full justify-around">
 						<div>
 						
-							<a href="/" class="flex py-4 px-2">
+							<a href="/" className="flex py-4 px-2">
 								<Logo />
 							</a>
 						</div>
 					
-						<div class="hidden md:flex items-end space-x-5">
-              <p className={navStatusHome}> <NavLink to="/">Home</NavLink></p>
+						<div className="hidden md:flex items-end space-x-5">
+            <NavLink to="/"><p className={navStatusHome}> Home</p></NavLink>
               <p className={navStatusServices}><NavLink to="/services"> Services </NavLink></p>
 							<p className={navStatusAbout}><NavLink to="/about"> About </NavLink></p>
 							<p href="" className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300">Contact Us</p>
@@ -84,13 +90,13 @@ export default function NavBarThree() {
 			
 					
 					<div className="md:hidden flex items-center">
-              <button onClick={navToggle} class="outline-none mobile-menu-button text-white pr-5">
-						<svg class=" w-6 h-6 text-white-100 hover:text-green-500 "
+              <button onClick={navToggle} className="outline-none mobile-menu-button text-white pr-5">
+						<svg className=" w-6 h-6 text-white-100 "
 							x-show="showMenu"
 							fill="none"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
 						>
@@ -103,10 +109,10 @@ export default function NavBarThree() {
 			
 			<div className={mobileToggle}>
 				<ul className="">
-					<li><p className={navStatusHomeMobile}><NavLink to="/">Home</NavLink></p></li>
-            <li><p  className={navStatusServicesMobile}><NavLink to="/services"> Services </NavLink></p></li>
-            <li><p className={navStatusAboutMobile}><NavLink to="/about"> About </NavLink></p></li>
-					<li><p className="block text-sm px-2 py-4 text-white hover:bg-green-500 transition duration-300">Contact Us</p></li>
+					<li><NavLink to="/"><p className={navStatusHomeMobile}>Home</p></NavLink></li>
+            <li><NavLink to="/services"><p className={navStatusServicesMobile}> Services </p></NavLink></li>
+            <li><NavLink to="/about"> <p className={navStatusAboutMobile}>About</p> </NavLink></li>
+					<li><p className="block text-sm px-2 py-4 text-white">Contact Us</p></li>
 				</ul>
         </div>
         
