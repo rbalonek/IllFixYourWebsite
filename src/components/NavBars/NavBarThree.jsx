@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Logo from '../Logo'
 import { NavLink, useLocation } from "react-router-dom";
+import {EmailForm} from "../EmailForm.jsx"
 
 export default function NavBarThree() {
   const location = useLocation();
@@ -18,6 +19,7 @@ export default function NavBarThree() {
   const [navStatusServicesMobile, setNavStatusServicesMobile] = useState(isNotOnPageMobile)
   const [navStatusAboutMobile, setNavStatusAboutMobile] = useState(isNotOnPageMobile)
 
+  const [toggleEmailForm, setToggleEmailForm] = useState('hidden')
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -63,9 +65,17 @@ export default function NavBarThree() {
     } else {
       setMobileToggle("hidden")
     }
- }
+  }
+  
+  const LaunchEmailForm = () => {
+    if (toggleEmailForm === 'hidden') {
+      setToggleEmailForm('')
+    } else {
+      setToggleEmailForm('hidden')
+    }
+  }
+
   return (
-    <div className=''>
     
 		<nav className=" bg-blue-500 shadow-lg md: ">
 			<div className=" ">
@@ -82,7 +92,7 @@ export default function NavBarThree() {
             <NavLink to="/"><p className={navStatusHome}> Home</p></NavLink>
               <p className={navStatusServices}><NavLink to="/services"> Services </NavLink></p>
 							<p className={navStatusAbout}><NavLink to="/about"> About </NavLink></p>
-							<p href="" className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300">Contact Us</p>
+							<p onClick={LaunchEmailForm} className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300 cursor-pointer">Contact Us</p>
               </div>
               
 					</div>
@@ -112,12 +122,13 @@ export default function NavBarThree() {
 					<li><NavLink to="/"><p className={navStatusHomeMobile}>Home</p></NavLink></li>
             <li><NavLink to="/services"><p className={navStatusServicesMobile}> Services </p></NavLink></li>
             <li><NavLink to="/about"> <p className={navStatusAboutMobile}>About</p> </NavLink></li>
-					<li><p className="block text-sm px-2 py-4 text-white">Contact Us</p></li>
+					<li><p onClick={LaunchEmailForm} className="block text-sm px-2 py-4 text-white">Contact Us</p></li>
 				</ul>
         </div>
-        
-        
+        <div className={toggleEmailForm}>
+          <EmailForm handleClick={LaunchEmailForm} />
+        </div>
       </nav>
-    </div>
+    
   )
 }
