@@ -40,11 +40,11 @@ export default function BeforeAfter(props) {
               <p className='font-semibold'>{ props.BoldText}</p>
               <br />
               {props.ListText.length && (
-                <>
+                <div>
                   {props.ListText.map((text, index) => (
                       <p key={props.Title + index}>{text}</p>
                 ))}
-                </>
+                </div>
               )}
               <br />
               <p>{props.FinalText}</p>
