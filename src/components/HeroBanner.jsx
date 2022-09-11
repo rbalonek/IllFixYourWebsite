@@ -1,8 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { EmailForm } from './EmailForm'
 
 export default function HeroBanner() {
+  const [toggleEmailForm, setToggleEmailForm] = useState('hidden')
+  const LaunchEmailForm = () => {
+    if (toggleEmailForm === 'hidden') {
+      setToggleEmailForm('')
+    } else {
+      setToggleEmailForm('hidden')
+    }
+  }
+
   return (
     <div className='flex sm:flex-row justify-around md: flex-col h-5/6 items-center'>
+    <div className={toggleEmailForm}>
+    <EmailForm handleClick={LaunchEmailForm}  />
+    </div>
       <div className='bg-green-700 w-80 h-72 flex flex-col items-center justify-center text-center rounded ml-5 relative top-5 shadow-md shadow-black'>
         <h1 className='text-2xl font-extrabold underline underline-offset-4 text-white pb-3'>I'll Fix Your</h1>
         <ul className='text-sm text-center text-white'>
@@ -15,7 +28,7 @@ export default function HeroBanner() {
           <li>ClickFunels</li>
           <li>And More!</li>
         </ul>
-      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5'>Free consultation</button>        
+      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5'>Free consultation</button>        
       </div>
 
 <br />
@@ -32,7 +45,7 @@ export default function HeroBanner() {
           
           <br/>
         </ul>
-      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5'>Free consultation</button>        
+      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5'>Free consultation</button>        
       </div>
 
 

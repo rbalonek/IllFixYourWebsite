@@ -1,8 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { EmailForm } from '../components/EmailForm'
 
 export default function About() {
+  const [toggleEmailForm, setToggleEmailForm] = useState('hidden')
+  const LaunchEmailForm = () => {
+    if (toggleEmailForm === 'hidden') {
+      setToggleEmailForm('')
+    } else {
+      setToggleEmailForm('hidden')
+    }
+  }
   return (
     <div className='text-white min-h-screen flex flex-col align-center '>
+      <div className={toggleEmailForm}>
+      <EmailForm handleClick={LaunchEmailForm}  />
+      </div>
       <h1 className='text-center h-32  mb-5 flex justify-center items-center text-7xl font-extralight'>About</h1>
       <div className='w-11/12 bg-green-700  self-center p-8 shadow-md shadow-black rounded'>
       <p>I'll Fix Your Website was built by Robert Balonek (Link to Dev) after helping hundreds of clients with website design, creation, and bug fixes.</p>
@@ -18,7 +30,7 @@ export default function About() {
         <p>Book a free consultation today and see what we can accomplish!</p>
         <br />
         <div className='flex justify-center w-100'>
-        <button className='shadow-sm shadow-black w-30 max-w-md self-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5'>CONTACT</button>
+        <button onClick={LaunchEmailForm} className='shadow-sm shadow-black w-30 max-w-md self-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5'>CONTACT</button>
         </div>
       </div>
     </div>
