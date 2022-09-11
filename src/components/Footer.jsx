@@ -20,7 +20,7 @@ export default function Footer() {
       <NavLink onClick={scrollToTop} to="/"><Logo /></NavLink>
       </div>
       <div className='text-xs pb-5 '>
-      <a className=" hover:text-green-500 " href="https://robertbalonek.dev/" target="_blank"><p>Ⓒ Robert Balonek 2022</p></a>
+      <a className=" hover:text-green-500 " href="https://robertbalonek.dev/" target="_blank" rel="noreferrer"><p>Ⓒ Robert Balonek 2022</p></a>
       </div>
       </div>
       

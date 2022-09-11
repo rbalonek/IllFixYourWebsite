@@ -30,7 +30,7 @@ export default function HeroBanner() {
           <li>ClickFunels</li>
           <li>And More!</li>
         </ul>
-      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5'>Free consultation</button>        
+      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5 shadow-md shadow-black'>Free consultation</button>        
       </div>
 
 <br />
@@ -47,7 +47,7 @@ export default function HeroBanner() {
           
           <br/>
         </ul>
-      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5'>Free consultation</button>        
+      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5 shadow-md shadow-black'>Free consultation</button>        
       </div>
 
 

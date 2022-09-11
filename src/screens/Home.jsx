@@ -17,6 +17,9 @@ export default function Home() {
 
   return (
     <div>
+      <div >
+      <img className=' w-full' alt='banner' src="https://res.cloudinary.com/bobalobbadingdong/image/upload/v1662915920/Portfolio%20Pics/ill%20fix%20your%20website/Screen_Shot_2022-09-11_at_9.58.44_AM_lslvwb.png" />
+      </div>
       <HeroBanner />
 
       <BeforeAfter
@@ -46,7 +49,7 @@ export default function Home() {
           "- Added a Wix repeater so he can easily add more books with links to the sales pages with only adding them to a spreadsheet database on Wix",
 
         ]}
-        FinalText="I had a great time working with Matthew. Once I made the changes to his site, the goal was to make sure that he can update the site whenever he needs, so I made a few tutorials for him to watch if he ever forgets how to update. I am currently on retainer for any updates or adjustments to the site."
+        // FinalText="I had a great time working with Matthew. Once I made the changes to his site, the goal was to make sure that he can update the site whenever he needs, so I made a few tutorials for him to watch if he ever forgets how to update. I am currently on retainer for any updates or adjustments to the site."
       />
 
       <BeforeAfter
