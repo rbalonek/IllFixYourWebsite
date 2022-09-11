@@ -2,17 +2,18 @@ import React from 'react'
 import MiltonBefore from "../../assets/images/MiltonImages/Milton Before1.jpg"
 import MiltonAfter from "../../assets/images/MiltonImages/Milton After.gif"
 
-export default function BeforeAfter() {
+export default function BeforeAfter(props) {
   return (
     <div
       className='pt-12 pb-6'
     >
+      <h1 className='text-center text-2xl font-extrabold underline underline-offset-4 text-white pb-5'>TITLE</h1>
       <div className='flex flex-col items-center'>
         
         
         
         {/* Container for Project */}
-        <div className=' w-sm-container h-sm-container md:w-md-container md:h-md-container  lg:h-lg-conatiner lg:w-lg-conatiner border-2 flex flex-col betwee '>
+        <div className=' w-11/12 w-sm-container h-sm-container md:w-md-container md:h-md-container  lg:h-lg-conatiner lg:w-lg-conatiner border-2 flex flex-col between shadow-md shadow-black bg-white'>
           {/* Top 2 halves */}
           <div
             // style={{display:'flex' ,width:"100%", height:'70%'}}
@@ -20,15 +21,15 @@ export default function BeforeAfter() {
           >
             
             <div
-              className='flex justify-center items-center h-100 w-1/2 border-r-2'
+              className='flex justify-center items-center h-100 w-1/2 border-r-2 bg-white '
             >
-              <img className='h-auto w-11/12' src={MiltonBefore} alt={MiltonBefore} />
+              <img className='h-auto ' src={MiltonBefore} alt={MiltonBefore} />
             </div>
 
             <div
-              className='flex justify-center items-center h-100 w-1/2 '
+              className='flex justify-center items-center h-100 w-1/2 bg-white'
             >
-            <img className='h-auto w-11/12' src={MiltonAfter} alt={MiltonAfter} />
+            <img className='h-auto ' src={MiltonAfter} alt={MiltonAfter} />
             </div>
 
             </div>
@@ -36,7 +37,7 @@ export default function BeforeAfter() {
           
             {/* Bottom 1/3 full width */}
           <div
-            className='h-1/2 lg:h-1/3 w-100 flex flex-column border-t-2 '> 
+            className='h-1/2 lg:h-1/3 w-10/12 self-center flex flex-column border-t-2 bg-white'> 
             <div className='text-xs lg:text-sm  w-100 h-100 font-serif xl:text-base pt-2 pl-2 pr-2'>
               <p className='font-semibold'>I fixed Matthew’s website to be responsive, and gave it a fresh new look with Parrallax Scrolling. Functionally, I improved on or added:</p>
               <br />

@@ -77,7 +77,7 @@ export default function NavBarThree() {
 
   return (
     
-		<nav className=" bg-blue-500 shadow-lg md: ">
+		<nav className=" pb-2 bg-blue-500 shadow-lg ">
 			<div className=" ">
 				<div className="flex">
 					<div className="flex w-full justify-around">
