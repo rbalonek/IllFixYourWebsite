@@ -6,8 +6,10 @@ export default function Services() {
   const LaunchEmailForm = () => {
     if (toggleEmailForm === 'hidden') {
       setToggleEmailForm('')
+      window.scrollTo(0, 0)
     } else {
       setToggleEmailForm('hidden')
+      window.scrollTo(0, 0)
     }
   }
 

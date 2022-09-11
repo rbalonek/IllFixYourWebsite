@@ -13,6 +13,7 @@ export const EmailForm = (props) => {
       .then((result) => {
         console.log(result.text);
         navigate('/'); ///OR TY Message?
+        window.scrollTo(0, 0)
       }, (error) => {
           console.log(error.text);
       });
