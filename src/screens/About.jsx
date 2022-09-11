@@ -19,7 +19,7 @@ export default function About() {
       </div>
       <h1 className='text-center h-32  mb-5 flex justify-center items-center text-7xl font-extralight'>About</h1>
       <div className='w-11/12 bg-green-700  self-center p-8 shadow-md shadow-black rounded'>
-      <p>I'll Fix Your Website was built by Robert Balonek (Link to Dev) after helping hundreds of clients with website design, creation, and bug fixes.</p>
+      <p>I'll Fix Your Website was built by <a className='text-blue-400' href="https://robertbalonek.dev/" target="_blank" rel="noreferrer">Robert Balonek</a> after helping hundreds of clients with website design, creation, and bug fixes.</p>
       <br />
       <p>Robert started off in the real estate and performing arts industries in NYC where he built real estate lead, rental, and sales funnels using iWeb, Wix, and Squarespace.</p>
       <br />
@@ -27,7 +27,7 @@ export default function About() {
       <br />
       <p>For front end design, he is familiar with Tailwind (which was used to create this website), Bootstrap, CSS, SCSS, and responsive design. </p>
       <br />
-      <p>Other services include website pixel and traffic tracking, social media ads and strategy, payment platforms, eCommerce,SEO best practices,  and website testing. </p>
+      <p>Other services include website pixel and traffic tracking, social media ads and strategy, payment platforms, eCommerce, SEO best practices,  and website testing. </p>
       <br /> 
         <p>Book a free consultation today and see what we can accomplish!</p>
         <br />
