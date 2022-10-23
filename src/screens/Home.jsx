@@ -7,8 +7,7 @@ import HeroBanner from '../components/HeroBanner'
 import MiltonBefore from "../assets/images/MiltonImages/Milton Before1.jpg"
 import MiltonAfter from "../assets/images/MiltonImages/Milton After.gif"
 import ACBO1 from "../assets/images/ACBOImages/Member Home.png"
-import ACBO2 from "../assets/images/ACBOImages/NBDD Mobile.png"
-
+import ACBO2 from "../assets/images/ACBOImages/NBDD Mobile copy.png"
 export default function Home() {
 
   const scrollToTop = () => {
