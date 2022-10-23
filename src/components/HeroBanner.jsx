@@ -18,7 +18,7 @@ export default function HeroBanner() {
     <div className={toggleEmailForm}>
     <EmailForm handleClick={LaunchEmailForm}  />
     </div>
-      <div className='bg-green-700 w-80 h-72 flex flex-col items-center justify-center text-center rounded relative top-5 shadow-md shadow-black'>
+      <div className='bg-green-700 w-72 h-96 flex flex-col items-center justify-around text-center rounded relative top-5 shadow-md shadow-black'>
         <h1 className='text-2xl font-extrabold underline underline-offset-4 text-white pb-3'>I'll Fix Your</h1>
         <ul className='text-sm text-center text-white shadow-md shadow-white p-2 relative top-2 rounded'>
           <li>Wordpress</li>
@@ -30,13 +30,13 @@ export default function HeroBanner() {
           <li>ClickFunels</li>
           <li>And More!</li>
         </ul>
-      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5 shadow-md shadow-black'>Free consultation</button>        
+      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-2/3 rounded mt-5 shadow-md shadow-black'>Free consultation</button>        
       </div>
 
 <br />
-      <div className='bg-green-700 w-80 h-72 flex flex-col items-center justify-center text-center rounded relative top-5 shadow-md shadow-black'>
+      <div className='bg-green-700 w-72 h-96 flex flex-col items-center justify-around text-center rounded relative top-5 shadow-md shadow-black'>
         <h1 className='text-2xl text-white pb-3 font-extrabold underline underline-offset-4'>I'll Help with your</h1>
-        <br />
+       
         <ul className='text-sm text-center text-white shadow-md shadow-white p-2 relative top-2 rounded'>
           <li>SEO</li>
           <li>Social Media</li>
@@ -46,7 +46,7 @@ export default function HeroBanner() {
           
           <br/>
         </ul>
-      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-3/4 rounded mt-5 shadow-md shadow-black'>Free consultation</button>        
+      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-2/3 rounded mt-5 shadow-md shadow-black'>Free consultation</button>        
       </div>
 
 
