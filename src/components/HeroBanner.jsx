@@ -18,9 +18,9 @@ export default function HeroBanner() {
     <div className={toggleEmailForm}>
     <EmailForm handleClick={LaunchEmailForm}  />
     </div>
-      <div className='bg-green-700 w-80 h-72 flex flex-col items-center justify-center text-center rounded ml-5 relative top-5 shadow-md shadow-black'>
+      <div className='bg-green-700 w-80 h-72 flex flex-col items-center justify-center text-center rounded relative top-5 shadow-md shadow-black'>
         <h1 className='text-2xl font-extrabold underline underline-offset-4 text-white pb-3'>I'll Fix Your</h1>
-        <ul className='text-sm text-center text-white'>
+        <ul className='text-sm text-center text-white shadow-md shadow-white p-2 relative top-2 rounded'>
           <li>Wordpress</li>
           <li>Wix</li>
           <li>Squarespace</li>
@@ -34,11 +34,10 @@ export default function HeroBanner() {
       </div>
 
 <br />
-      <div className='bg-green-700 w-80 h-72 flex flex-col items-center justify-center text-center rounded ml-5 relative top-5 shadow-md shadow-black'>
+      <div className='bg-green-700 w-80 h-72 flex flex-col items-center justify-center text-center rounded relative top-5 shadow-md shadow-black'>
         <h1 className='text-2xl text-white pb-3 font-extrabold underline underline-offset-4'>I'll Help with your</h1>
-        <ul className='text-sm text-center text-white'>
         <br />
-        <br />
+        <ul className='text-sm text-center text-white shadow-md shadow-white p-2 relative top-2 rounded'>
           <li>SEO</li>
           <li>Social Media</li>
           <li>Constant Contact</li>
