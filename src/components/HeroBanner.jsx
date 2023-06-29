@@ -7,6 +7,7 @@ export default function HeroBanner() {
     if (toggleEmailForm === 'hidden') {
       setToggleEmailForm('')
       window.scrollTo(0, 0)
+
     } else {
       setToggleEmailForm('hidden')
       window.scrollTo(0, 0)
@@ -30,7 +31,7 @@ export default function HeroBanner() {
           <li>ClickFunels</li>
           <li>And More!</li>
         </ul>
-      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-2/3 rounded mt-5 shadow-md shadow-black'>Free consultation</button>        
+      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-2/3 rounded mt-5 shadow-md shadow-black contact-btn'>Free consultation</button>        
       </div>
 
 <br />
@@ -46,7 +47,7 @@ export default function HeroBanner() {
           
           <br/>
         </ul>
-      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-2/3 rounded mt-5 shadow-md shadow-black'>Free consultation</button>        
+      <button onClick={LaunchEmailForm} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 w-2/3 rounded mt-5 shadow-md shadow-black contact-btn'>Free consultation</button>        
       </div>
 
 
