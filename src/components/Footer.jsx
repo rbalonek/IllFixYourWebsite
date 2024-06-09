@@ -11,8 +11,6 @@ export default function Footer() {
       
     <div className='flex flex-col pl-5'>
     <NavLink onClick={scrollToTop} to="/"><p className="relative top-5 hover:text-green-500 w-14"> Home</p></NavLink>
-    <p className="relative top-7 hover:text-green-500 w-14"><NavLink onClick={scrollToTop} to="/services"> Services </NavLink></p>
-    <p className="relative top-9 hover:text-green-500 w-14"><NavLink onClick={scrollToTop} to="/about"> About </NavLink></p>
     </div>
       
       <div className='flex mt-20 flex-col text-center justify-end md:mt-0'>
