@@ -92,8 +92,6 @@ export default function NavBarThree() {
 					
 						<div className="hidden md:flex items-end space-x-5">
             <NavLink to="/"><p className={navStatusHome}> Home</p></NavLink>
-              <p className={navStatusServices}><NavLink to="/services"> Services </NavLink></p>
-							<p className={navStatusAbout}><NavLink to="/about"> About </NavLink></p>
 							<p onClick={LaunchEmailForm} className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300 cursor-pointer">Contact Us</p>
               </div>
               
@@ -122,8 +120,6 @@ export default function NavBarThree() {
 			<div className={mobileToggle}>
 				<ul className="">
 					<li><NavLink to="/"><p className={navStatusHomeMobile}>Home</p></NavLink></li>
-            <li><NavLink to="/services"><p className={navStatusServicesMobile}> Services </p></NavLink></li>
-            <li><NavLink to="/about"> <p className={navStatusAboutMobile}>About</p> </NavLink></li>
 					<li><p onClick={LaunchEmailForm} className="block text-sm px-2 py-4 text-white">Contact Us</p></li>
 				</ul>
         </div>

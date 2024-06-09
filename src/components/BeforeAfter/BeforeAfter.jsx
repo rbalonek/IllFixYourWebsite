@@ -9,13 +9,13 @@ export default function BeforeAfter(props) {
         text-white
         '
     >
-      <a href={props.Link} target="_blank" rel="noreferrer"><h1 className='text-center text-2xl font-extrabold underline underline-offset-4 text-white pb-5 hover:text-blue-300'>{ props.Title }</h1></a>
-      <div className='flex flex-col items-center md:h-max'>
-        
-        
-        
-        {/* Container for Project */}
-        <div className=' p-5 md:w-md-container md:h-md-container  lg:h-lg-conatiner lg:w-lg-conatiner  flex flex-col justify-end shadow-md shadow-black bg-green-700 rounded'>
+    <div className='flex flex-col items-center md:h-max'>
+    
+    
+    
+    {/* Container for Project */}
+    <div className=' p-5 md:w-md-container md:h-md-container  lg:h-lg-conatiner lg:w-lg-conatiner  flex flex-col justify-end shadow-md shadow-black bg-green-700 rounded'>
+    <a href={props.Link} target="_blank" rel="noreferrer"><h1 className='text-center text-2xl font-extrabold underline underline-offset-4 text-white pb-5 hover:text-blue-300'>{ props.Title }</h1></a>
           {/* Top 2 halves */}
           <div
             // style={{display:'flex' ,width:"100%", height:'70%'}}
