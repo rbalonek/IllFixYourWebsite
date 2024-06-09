@@ -1,19 +1,33 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import CryptoJS from 'crypto-js';
 import { useNavigate } from 'react-router-dom';
 
 export const EmailForm = (props) => {
   let navigate = useNavigate();
   const form = useRef();
 
+  const hashEmail = (email) => {
+    return CryptoJS.SHA256(email).toString(CryptoJS.enc.Hex);
+  }
+
   const sendEmail = (e) => {
     e.preventDefault();
+    const emailInput = form.current.elements['reply_to'].value; // Access the email input
+    const hashedEmail = hashEmail(emailInput);
+
+    // Push to Data Layer
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'emailSubmission',
+      'hashedEmail': hashedEmail
+    });
 
     emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
-        navigate('/'); // Redirect or show a Thank You message
-        window.scrollTo(0, 0);
+        window.location.reload()
+        alert("thanks, we'll be in touch!")
       }, (error) => {
           console.log(error.text);
       });
@@ -34,7 +48,7 @@ export const EmailForm = (props) => {
 
           <input className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit" value="Send" />
         </form>
-
+        
         <br />
         <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded' onClick={props.handleClick}>Exit</button>
       </div>
