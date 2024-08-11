@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Logo from '../Logo'
 import { NavLink, useLocation } from "react-router-dom";
 import {EmailForm} from "../EmailForm.jsx"
+import FreeGTMDownloadForm from '../FreeGTMDownloadForm.jsx';
 
 export default function NavBarThree() {
   const location = useLocation();
@@ -18,9 +19,17 @@ export default function NavBarThree() {
   const [navStatusHomeMobile, setNavStatusHomeMobile] = useState(isNotOnPageMobile)
   const [navStatusServicesMobile, setNavStatusServicesMobile] = useState(isNotOnPageMobile)
   const [navStatusAboutMobile, setNavStatusAboutMobile] = useState(isNotOnPageMobile)
+  const [isEmailOrFreeForm, setIsEmailOrFreeForm] =useState("email")
 
   const [toggleEmailForm, setToggleEmailForm] = useState('hidden')
-
+// eslint-disable-next-line
+  const test = () => {
+    console.log(navStatusServices,
+      navStatusAbout,
+      navStatusServicesMobile,
+      navStatusAboutMobile)
+  }
+  
   useEffect(() => {
     if (location.pathname === "/") {
       setNavStatusHome(isOnPage)
@@ -55,7 +64,7 @@ export default function NavBarThree() {
 
       setMobileToggle("hidden")
 
-    }
+    } 
   }, [location.pathname])
   
   
@@ -71,6 +80,18 @@ export default function NavBarThree() {
     if (toggleEmailForm === 'hidden') {
       setToggleEmailForm('')
       window.scrollTo(0, 0)
+      setIsEmailOrFreeForm("email")
+    } else {
+      setToggleEmailForm('hidden')
+      window.scrollTo(0, 0)
+    }
+  }
+
+  const LaunchFreeForm = () => {
+    if (toggleEmailForm === 'hidden') {
+      setToggleEmailForm('')
+      window.scrollTo(0, 0)
+      setIsEmailOrFreeForm("free form")
     } else {
       setToggleEmailForm('hidden')
       window.scrollTo(0, 0)
@@ -92,7 +113,8 @@ export default function NavBarThree() {
 					
 						<div className="hidden md:flex items-end space-x-5">
             <NavLink to="/"><p className={navStatusHome}> Home</p></NavLink>
-							<p onClick={LaunchEmailForm} className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300 cursor-pointer">Contact Us</p>
+              <p onClick={LaunchEmailForm} className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300 cursor-pointer">Contact Us</p>
+              <p onClick={LaunchFreeForm} className="py-4 px-2 text-white font-semibold hover:text-green-500 transition duration-300 cursor-pointer">Free GTM Template</p>
               </div>
               
 					</div>
@@ -120,11 +142,21 @@ export default function NavBarThree() {
 			<div className={mobileToggle}>
 				<ul className="">
 					<li><NavLink to="/"><p className={navStatusHomeMobile}>Home</p></NavLink></li>
-					<li><p onClick={LaunchEmailForm} className="block text-sm px-2 py-4 text-white">Contact Us</p></li>
+          <li><p onClick={LaunchEmailForm} className="block text-sm px-2 py-4 text-white">Contact Us</p></li>
+          <li><p onClick={LaunchFreeForm} className="block text-sm px-2 py-4 text-white">Free GTM Template</p></li>
 				</ul>
         </div>
-        <div className={toggleEmailForm}>
+      <div className={toggleEmailForm}> 
+        {isEmailOrFreeForm === "email" ?
+          <>
           <EmailForm handleClick={LaunchEmailForm} />
+          </>
+          :
+          <>
+          <FreeGTMDownloadForm handleClick={LaunchEmailForm} />
+          </>
+          }
+        
         </div>
       </nav>
     

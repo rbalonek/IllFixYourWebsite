@@ -6,9 +6,9 @@ import Services from './Services';
 import ServicesContainer from '../components/ServicesContainer/ServicesContainer';
 export default function Home() {
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0)
-  }
+  // const scrollToTop = () => {
+  //   window.scrollTo(0, 0)
+  // }
 
   return (
     <div>
