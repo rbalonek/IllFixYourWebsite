@@ -54,10 +54,10 @@ export default function ServicesContainer() {
           </ul>
         </div>
         <br />
-        <a onClick={LaunchEmailForm}  className="cursor-pointer relative group inline-block w-full py-4 px-6 text-center text-gray-800 hover:text-gray-50 bg-yellow-300 font-semibold rounded-full overflow-hidden transition duration-200">
+        <p onClick={LaunchEmailForm}  className="cursor-pointer relative group inline-block w-full py-4 px-6 text-center text-gray-800 hover:text-gray-50 bg-yellow-300 font-semibold rounded-full overflow-hidden transition duration-200">
           <div className="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
           <span className="relative">Set up a free consultation</span>
-        </a>
+        </p>
       </div>
     </div>
   );
