@@ -29,7 +29,7 @@ export default function FreeGTMDownloadForm(props) {
       .then((result) => {
         console.log(result.text);
         window.location.reload()
-        alert("thanks, check your inbox for the free download!")
+        alert("Thanks, check your inbox for the free download!")
       }, (error) => {
           console.log(error.text);
       });
