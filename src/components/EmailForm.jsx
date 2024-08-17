@@ -27,7 +27,7 @@ export const EmailForm = (props) => {
       .then((result) => {
         console.log(result.text);
         window.location.reload()
-        alert("thanks, we'll be in touch!")
+        alert("Thanks, we'll be in touch!")
       }, (error) => {
           console.log(error.text);
       });
